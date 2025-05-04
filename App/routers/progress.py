@@ -33,7 +33,7 @@ def red_my_progress(
 ):
   return crud.get_my_progress(db, user_id=current_user.id)
 
-@router.put("/{progress_id}/complete", response_model=schemas.ProgresOut)
+@router.put("/{progress_id}/complete", response_model=schemas.ProgressOut)
 def mark_session_complete(
   progress_id: int,
   db: Session = Depends(get_db),
